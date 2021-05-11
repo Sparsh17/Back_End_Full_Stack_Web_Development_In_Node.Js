@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+}
+
+#page-heading {
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+
+#div1 {
+    text-align: center;
+}
+
+.highlight {
+    background-color: #3262ab;
+    width: 50%;
+    height: 3%;
+}
+
+li {
+    list-style: none;
+    margin: 2px;
+}
+
+.left {
+    text-align: left;
+}
+
+#right {
+    text-align: right;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+}
+
+form input{
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 10px auto;
+    padding: 4px;
+}
+
+.highlight:hover {
+    background-color: grey;
+    transition: 0.5s;
+}
+
+form button[type="submit"] {
+    padding: 10px 0;
+    margin: 1px;
+    border: 1px solid transparent;
+    background: #3262ab;
+    color: white;
+    border-radius: 5px;
+    width: 25%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+form {
+    position: absolute;
+    left: 30%;
+} 
+a {
+    color: white;
+    background-color: red;
+    margin: 2px;
+}
+
+
+
+/*
+#contact-list-container ul{
+    padding: 0;
+    list-style: none;
+}
+ p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+}
+
+
+ 
+.contact {
+    padding: 3px 10px;
+    border: 1px solid white;
+    background-color: #6f92f9;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    color: white;
+    display: flex;
+}
+
+.contact .details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.contact .delete-button {
+    width: 10%;
+    padding: 3px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contact .delete-button a{
+    color: white;
+    background-color: red;
+}
+
+form {
+    position: absolute;
+    left: 30%;
+}
+
+form button[type="submit"] {
+    padding: 10px 0;
+    margin: 1px;
+    border: 1px solid transparent;
+    background: #3262ab;
+    color: white;
+    border-radius: 5px;
+    width: 25%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+form input{
+    display: inline-block;
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 10px auto;
+    padding: 4px;
+} */
