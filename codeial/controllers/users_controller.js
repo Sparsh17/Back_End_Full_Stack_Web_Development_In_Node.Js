@@ -2,25 +2,31 @@ const User = require('../models/user');
 
 module.exports.profile = function(req,res){
 
-    if(req.cookies.user_id){
-        User.findById(req.cookies.user_id, function(err,user){
-            if(user){
-                return res.render('user_profile', {
-                    title: "User Profile",
-                    user: user
-                })
-            }else{
-                return res.redirect('/users/sign-in');
-            }
-        });
-    }else{
-        return res.redirect('/users/sign-in');
-    }
+    return res.render('user_profile', {
+        title: 'User Profile'
+    })
+    // if(req.cookies.user_id){
+    //     User.findById(req.cookies.user_id, function(err,user){
+    //         if(user){
+    //             return res.render('user_profile', {
+    //                 title: "User Profile",
+    //                 user: user
+    //             })
+    //         }else{
+    //             return res.redirect('/users/sign-in');
+    //         }
+    //     });
+    // }else{
+    //     return res.redirect('/users/sign-in');
+    // }
 
 };
 
 // render Sign Up page
 module.exports.signUp = function(req, res){
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign_up', {
         title: "Codeial | Sign Up"
     });
@@ -28,6 +34,9 @@ module.exports.signUp = function(req, res){
 
 // render Sign In page
 module.exports.signIn = function(req, res){
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign_in', {
         title: "Codeial | Sign In"
     });
@@ -103,3 +112,8 @@ module.exports.create = function(req, res){
 module.exports.createSession = function(req, res){
     return res.redirect('/');
 };
+
+module.exports.destroySession = function(req, res){
+    req.logout();
+    return res.redirect('/');
+}
